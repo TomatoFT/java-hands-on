@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class HelloWorld {
 
@@ -40,6 +41,12 @@ public class HelloWorld {
         System.out.println("String B: "+ b);
     }
 
+    private static void random() {
+        Random random = new Random();
+        double x = random.nextDouble();
+        System.out.println(x);
+    }
+
     private static void printInput() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("What is your name?");
@@ -66,13 +73,39 @@ public class HelloWorld {
         System.out.println("devide float: "+ (float)(x/y));
         System.out.println("increse: "+(x++));
     }
+
+    private static void printMenu () {
+        System.out.println("Choose option to pick: ");
+        System.out.println("1. print Hello World");
+        System.out.println("2. Calculation");
+        System.out.println("3. Print Data Type");
+        System.out.println("4. Swap Value");
+        System.out.println("5. Print Input");
+        System.out.println("6. ArithMetic Calculation");
+        System.out.println("7. Print Random Number");
+
+    }
+
+    private static void printHelloWold() {
+        System.out.println("Hello World");
+    }
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
-        calculation();
-        datatype();
-        swap();
-        // printInput();
-        arithmeticCalculation();
+        while(true) {
+        printMenu();
+        Scanner choice_scanner = new Scanner(System.in);        
+
+        int choice = choice_scanner.nextInt();
+
+        switch (choice) {
+            case 1: printHelloWold(); break;
+            case 2: calculation(); break;
+            case 3: datatype(); break;
+            case 4: swap(); break;
+            case 5: printInput(); break;
+            case 6: arithmeticCalculation(); break;
+            case 7: random(); break;
+        }
+    }
     }
 }
 
