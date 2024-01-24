@@ -58,6 +58,7 @@ public class HelloWorld {
 
         System.out.println("Hello "+name+" from "+place);
         System.out.println("You are in grade "+grade);
+        scanner.close();
 
     }
 
@@ -105,7 +106,9 @@ public class HelloWorld {
             case 6: arithmeticCalculation(); break;
             case 7: random(); break;
         }
+    choice_scanner.close();
     }
+    
     }
 }
 

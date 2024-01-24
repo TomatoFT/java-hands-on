@@ -24,5 +24,8 @@ public class Practice {
         System.out.println(getMin(a,b));
         System.out.println(getMax(a,b));
         System.out.println(getSqrt(4));
+
+        System.out.println(getAbs(a));
+        System.out.println(getRound(a));
     }
 }

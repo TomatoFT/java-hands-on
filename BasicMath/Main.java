@@ -9,6 +9,6 @@ public class Main {
         int y = scanner.nextInt();
 
         System.out.println(Math.sqrt((x*x)+(y*y)));
-
+        scanner.close();
     }
 }
